@@ -1,0 +1,74 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>Samsung Isssue Heading Creator</title>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="index.css" rel="stylesheet" type='text/css'>
+</head>
+<body>
+
+
+<p style="color:wheat;font-size:55px;text-align:center;">Samsung Isssue Heading Creator</p>
+
+<div>
+  <label>Title : </label>
+    <select name="title" action="post" id="title" onchange="return show_title(this.value);">
+    <option value="none" selected>none</option>
+    <option value="Aditi">Aditi</option>
+    <option value="Abhishek">Abhishek</option>
+    </select>
+</div>
+
+<div>
+    <label>Issue Title : </label>
+    <select name="issueTopic" action="post" id="issueTopic" onchange="return show_issueTopic(this.value);">
+    <option value="none" selected>none</option>
+    <option value="Fundamental">Fundamental</option>
+    <option value="Core">Core</option>
+    </select>
+</div>
+
+<div>
+    <label>Module : </label>
+    <select name="Module" action="post" id="Module" onchange="return show_module(this.value);">
+    <option value="none" selected>none</option>
+    <option value="camera">camera</option>
+    <option value="app">app</option>
+    </select>
+</div>
+
+<div>
+  <br/>
+<div id="Final">
+   Title is <span id="titlespan"></span>
+   based on issue topic <span id="issueTopicspan"></span>
+   and module <span id="modulespan"></span>
+
+</div>
+<p><button type="submit" value="copy" onclick="copyToClipboard('#Final')">Copy</button></p>
+</div>
+</div>
+<script>
+    function show_title(title)
+    {
+        document.getElementById('titlespan').innerHTML = title;
+    }
+    function show_issueTopic(title2)
+    {
+        document.getElementById('issueTopicspan').innerHTML = title2;
+    }
+    function show_module(title3)
+    {
+        document.getElementById('modulespan').innerHTML = title3;
+    }
+    function copyToClipboard(element)
+    {
+    
+      document.execCommand("copy");
+      $temp.remove();
+    }
+
+ </script>
+</body>
+</html>
